@@ -1,8 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
-
-import Basic from "./components/Basic";
-import RenderPDF from "./components/RenderPDF";
+import "./index.css";
 import PDFChoose from "./components/PDFChoose";
 
 function App() {

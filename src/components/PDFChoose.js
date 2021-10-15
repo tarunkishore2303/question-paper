@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Basic from "./Basic";
+import DropdownChooser from "./DropdownChooser";
 import RenderPDF from "./RenderPDF";
 
 export default function PDFChoose() {
@@ -11,7 +11,7 @@ export default function PDFChoose() {
   }
   return (
     <div>
-      <Basic setFileFunc={setFileFunc} name="Shreeram" />
+      <DropdownChooser setFileFunc={setFileFunc} name="Shreeram" />
       <RenderPDF file={file} />
     </div>
   );
