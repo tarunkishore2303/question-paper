@@ -1,5 +1,5 @@
 import React from "react";
-import { Document, Page, Text, View, StyleSheet } from "@react-pdf/renderer";
+import { Document, Page, Text, View, StyleSheet} from "@react-pdf/renderer";
 
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, "0");
@@ -18,9 +18,18 @@ const styles = StyleSheet.create({
 	header: {
 		flexDirection: "column",
 		marginBottom: 20,
+		textAlign:"center",
+	},
+	clgName:{
+		fontSize:20,
+		fontWeight:"bold",
+		marginBottom: 10,
+		borderBottomWidth: '1px',
+		borderBottomColor: 'grey',
+		borderBottomStyle: 'solid'
 	},
 	title: {
-		fontSize: 20,
+		fontSize: 12,
 		fontWeight: "bold",
 		marginBottom: 10,
 	},
@@ -29,17 +38,29 @@ const styles = StyleSheet.create({
 		fontWeight: "bold",
 		marginBottom: 10,
 	},
-	date: {
-		fontSize: 12,
+	headingtwo:{
+		display:'flex',
+		fontSize: 8,
+		flexDirection: 'row',
 		marginBottom: 10,
+	},
+	date: {
+		flex: 7,
+	},
+	coursename: {
+		flex: 1,
+		alignItems: 'flex-end',
 	},
 	body: {
 		flexDirection: "column",
 		marginBottom: 20,
+		padding: 7,
 	},
 	bodyText: {
-		fontSize: 12,
+		fontSize: 10,
 		marginBottom: 10,
+		letterSpacing: 1,
+		lineHeight: 1,
 	},
 });
 function GetPDF({ answers }) {
@@ -48,8 +69,12 @@ function GetPDF({ answers }) {
 		<Document>
 			<Page size='A4' style={styles.page}>
 				<View style={styles.header}>
-					<Text style={styles.date}>{today}</Text>
+					<Text style={styles.clgName}>Thiagarajar College of Engineering</Text>
 					<Text style={styles.title}>Question Paper Audit</Text>
+				</View>
+				<View style={styles.headingtwo}>
+					<Text style={styles.date}>{today}</Text>
+					<Text style={styles.coursename}>Course Name</Text>
 				</View>
 				<View style={styles.body}>
 					<Text style={styles.subtitle}>
