@@ -24,7 +24,16 @@
     border-radius: 5%;
     font-family: 'Open Sans', sans-serif;
 }
+.btn a{
+    text-decoration: none;
+    color: #CDF2CA;
+}
 .btn:hover{
+    background-color: #CDF2CA;
+    color: #111;
+    font-weight: bolder;
+}
+.btn:hover a{
     background-color: #CDF2CA;
     color: #111;
     font-weight: bolder;
