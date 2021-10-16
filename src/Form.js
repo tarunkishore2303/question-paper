@@ -260,7 +260,10 @@ function Form() {
 						></textarea>
 
 						<p>
-							<button type='submit' class='btn'>
+							<button type='submit' className='btn'>
+								Submit
+							</button>{" "}
+							<button className='btn'>
 								{formik.isSubmitting ? (
 									<div className='loader'></div>
 								) : (
@@ -273,7 +276,7 @@ function Form() {
 										{({ blob, url, loading, error }) =>
 											loading
 												? "Loading document..."
-												: "Download"
+												: "Print Document"
 										}
 									</PDFDownloadLink>
 								)}
